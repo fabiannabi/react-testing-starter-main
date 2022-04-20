@@ -18,3 +18,17 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+
+//gloabl sign in for all test
+
+describe("notifications", () => {
+  it("should be able to access notifications", () => {
+    cy.visit("/");
+    cy.findByRole("textbox", { name: /username/i }).type("johndoe");
+    cy.findByLabelText(/password/i).type("s3cret");
+    cy.findByRole("checkbox", { name: /remember me/i }).click();
+    cy.findByRole("button", { name: /sign in/i }).click();
+  });
+})
