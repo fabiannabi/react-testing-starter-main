@@ -23,7 +23,7 @@ import './commands'
 
 //gloabl sign in for all test
 
-describe("notifications", () => {
+describe("login", () => {
   it("should be able to access notifications", () => {
     cy.visit("/");
     cy.findByRole("textbox", { name: /username/i }).type("johndoe");
